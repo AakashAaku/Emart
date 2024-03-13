@@ -2,6 +2,7 @@
 using EmartProd.Infrastructure.EmartContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmartProd.Infrastructure.Migrations
 {
     [DbContext(typeof(EmartProdDbContext))]
-    partial class EmartProdDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240312134548_BasicSetup")]
+    partial class BasicSetup
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.27");
