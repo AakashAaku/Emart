@@ -7,5 +7,7 @@ namespace EmartProd.Application.Interfaces
     {
        Task<Product> GetProductByIdAsync(int id);
        Task<IReadOnlyList<Product>> GetProductsAsync();
+       Task<IReadOnlyList<ProductType>> GetProductTypes();
+       Task<IReadOnlyList<ProductBrand>> GetProductBrands();
     }
 }

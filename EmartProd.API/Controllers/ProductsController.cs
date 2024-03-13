@@ -30,5 +30,17 @@ namespace EmartProd.API.Controllers
         {
             return await _productRepo.GetProductByIdAsync(id);
         }
+
+        [HttpGet("brands")]
+        public async Task<ActionResult<List<ProductBrand>>> GetProductBrands()
+        {
+            return Ok(await _productRepo.GetProductBrands());
+        }
+
+        [HttpGet("types")]
+        public async Task<ActionResult<List<ProductType>>> GetProductTypes()
+        {
+            return Ok(await _productRepo.GetProductTypes());
+        }
     }
 }
